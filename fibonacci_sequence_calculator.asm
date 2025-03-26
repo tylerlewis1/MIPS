@@ -1,11 +1,11 @@
 .data
-prompt: .asciiz "Enter the number of itterations you want.\n"
+prompt: .asciiz "Enter the number of iterations you want.\n"
 .align 2
 prompt1: .asciiz "would like to print the values as they are calculated?\n 1 = yes, 0 = no\n" 
 .align 2
 newline: .asciiz "\n"
 .align 2
-ittext: .asciiz "itteration "
+ittext: .asciiz "iteration "
 .align 2
 colon: .asciiz ": "
 .align 2
@@ -21,7 +21,7 @@ add $a0, $zero, $s0		#putting prompt into $a0
 syscall				#print string
 addi $v0, $zero, 5		#setting syscall to read int	
 syscall				#getdata
-addi $t0, $v0, 0		#max = itterations
+addi $t0, $v0, 0		#max = iterations
 addi $v0, $zero, 4		#setting syscall to print string
 add $a0, $zero, $s1		#putting prompt1 into $a0
 syscall				#print string
